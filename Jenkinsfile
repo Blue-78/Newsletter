@@ -8,19 +8,8 @@ pipeline {
     }
 
     stage('shell') {
-      parallel {
-        stage('shell') {
-          steps {
-            sh 'ls -la'
-          }
-        }
-
-        stage('chnagedir') {
-          steps {
-            sh 'cd node_modules'
-          }
-        }
-
+      steps {
+        sh 'ls -la'
       }
     }
 
